@@ -1,0 +1,49 @@
+{
+  "use_cuda": true,
+  "data_path": "data",
+  "model_path": "model/rgcn_dist_pre_raw.pth",
+  "train": {
+    "do": true,
+    "log_file": "log/rgcn_dist_pre_raw",
+    "n_epochs": 2000,
+    "eval_every": 400,
+    "edge_sampler": "uniform",
+    "negative_sample": 10,
+    "graph_split_size": 0.5,
+    "train_batch_size": 25000,
+    "grad_norm": 1.0,
+    "lr": 1e-2,
+    "weight_decay": 0.0,
+    "regularization": 0.01
+  },
+  "test": {
+    "do": true,
+    "test_target": true
+  },
+  "load_embed": {
+    "do": true,
+    "embed_path": "embeds/emb_raw.npz"
+  },
+  "export_embed": {
+    "do": true,
+    "embed_path": "embeds/emb_rgcn_pre_raw.npz"
+  },
+  "graph_encoder": {
+    "name": "rgcn",
+    "device": "cuda:0",
+    "n_hidden": 400,
+    "details": {
+      "rgcn": {
+        "n_layers": 2,
+        "n_bases": 100,
+        "dropout": 0.2
+      }
+    }
+  },
+  "relation_decoder": {
+    "name": "distmult",
+    "device": "cuda:0",
+    "n_hidden": 400,
+    "details": {}
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "use_cuda": true,
+  "data_path": "data",
+  "model_path": "model/gat_dist_pre_raw.pth",
+  "train": {
+    "do": true,
+    "log_file": "log/gat_dist_pre_raw",
+    "n_epochs": 2000,
+    "eval_every": 400,
+    "edge_sampler": "uniform",
+    "negative_sample": 10,
+    "graph_split_size": 0.5,
+    "train_batch_size": 30000,
+    "grad_norm": 1.0,
+    "lr": 1e-2,
+    "weight_decay": 0.0,
+    "regularization": 0.01
+  },
+  "test": {
+    "do": true,
+    "test_target": true
+  },
+  "load_embed": {
+    "do": true,
+    "embed_path": "embeds/emb_raw.npz"
+  },
+  "export_embed": {
+    "do": true,
+    "embed_path": "embeds/emb_gat_pre_raw.npz"
+  },
+  "graph_encoder": {
+    "name": "gat",
+    "device": "cuda:0",
+    "n_hidden": 400,
+    "details": {
+      "gat": {
+        "negative_slope": 0.2,
+        "n_layers": 2,
+        "n_heads": 4,
+        "residual": true,
+        "attn_drop": 0.0,
+        "in_drop": 0.0
+      }
+    }
+  },
+  "relation_decoder": {
+    "name": "distmult",
+    "device": "cuda:0",
+    "n_hidden": 400,
+    "details": {}
+  }
+}

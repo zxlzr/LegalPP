@@ -1,4 +1,7 @@
-# BERT-Graph-Link-Prediction
+# LegalPP
+
+> Codes for paper "***Text-guided Legal Knowledge Graph Reasoning***"
+
 - 使用BERT编码的嵌入作为图网络的节点嵌入
 - 对R-GCN进行拓展，图编码器为：RGCN/GAT，关系解码器为DistMult/SimplE
 - 对嵌入进行t-SNE可视化

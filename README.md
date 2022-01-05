@@ -1,6 +1,6 @@
 # LegalPP
 
-> Codes for paper "***Text-guided Legal Knowledge Graph Reasoning***"
+> Codes for paper "[***Text-guided Legal Knowledge Graph Reasoning***](https://link.springer.com/chapter/10.1007/978-981-16-6471-7_3)"
 
 - 使用BERT编码的嵌入作为图网络的节点嵌入
 - 对R-GCN进行拓展，图编码器为：RGCN/GAT，关系解码器为DistMult/SimplE
@@ -130,3 +130,33 @@ optional arguments:
   }
 }
 ```
+
+# Papers for the Project & How to Cite
+If you use or extend our work, please cite the following paper:
+
+```
+@InProceedings{10.1007/978-981-16-6471-7_3,
+author="Li, Luoqiu
+and Bi, Zhen
+and Ye, Hongbin
+and Deng, Shumin
+and Chen, Hui
+and Tou, Huaixiao",
+editor="Qin, Bing
+and Jin, Zhi
+and Wang, Haofen
+and Pan, Jeff
+and Liu, Yongbin
+and An, Bo",
+title="Text-Guided Legal Knowledge Graph Reasoning",
+booktitle="Knowledge Graph and Semantic Computing: Knowledge Graph Empowers New Infrastructure Construction",
+year="2021",
+publisher="Springer Singapore",
+address="Singapore",
+pages="27--39",
+abstract="Recent years have witnessed the prosperity of legal artificial intelligence with the development of technologies. In this paper, we propose a novel legal application of legal provision prediction (LPP), which aims to predict the related legal provisions of affairs. We formulate this task as a challenging knowledge graph completion problem, which requires not only text understanding but also graph reasoning. To this end, we propose a novel text-guided graph reasoning approach. We collect amounts of real-world legal provision data from the Guangdong government service website and construct a legal dataset called LegalLPP. Extensive experimental results on the dataset show that our approach achieves better performance compared with baselines. The code and dataset are available in https://github.com/zjunlp/LegalPPfor reproducibility.",
+isbn="978-981-16-6471-7"
+}
+```
+
+

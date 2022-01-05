@@ -1,6 +1,6 @@
 # LegalPP
 
-> Codes for paper "[***Text-guided Legal Knowledge Graph Reasoning***](https://link.springer.com/chapter/10.1007/978-981-16-6471-7_3)"
+> Codes for CCKS2021 paper "[***Text-guided Legal Knowledge Graph Reasoning***](https://link.springer.com/chapter/10.1007/978-981-16-6471-7_3)"
 
 - 使用BERT编码的嵌入作为图网络的节点嵌入
 - 对R-GCN进行拓展，图编码器为：RGCN/GAT，关系解码器为DistMult/SimplE
